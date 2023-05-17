@@ -92,6 +92,32 @@ function revealRight() {
     }
 }
 
+function animateValue(element, start, end, duration) {
+    var range = end - start;
+    var current = start;
+    var increment = end > start ? 1 : -1;
+    var stepTime = Math.abs(Math.floor(duration / range));
+    var timer = setInterval(function () {
+        current += increment;
+        element.innerText = current;
+        if (current == end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
+
+window.onload = function () {
+    var clients = 200;
+    var projects = 150;
+    var experts = 50;
+    var years = 10;
+
+    animateValue(document.getElementById('clientsCount'), 0, clients, 3000);
+    animateValue(document.getElementById('projectsCount'), 0, projects, 3000);
+    animateValue(document.getElementById('expertsCount'), 0, experts, 3000);
+    animateValue(document.getElementById('yearsCount'), 0, years, 3000);
+};
+
 window.addEventListener("scroll", revealLeft);
 window.addEventListener("scroll", revealRight);
 window.addEventListener("scroll", reveal);

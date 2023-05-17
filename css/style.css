@@ -17,9 +17,21 @@
     font-family: 'Roboto', sans-serif;
 }
 
+span {
+    color: var(--primaryColor);
+    word-spacing: 20px;
+
+}
+
 body {
     background-color: var(--pageColor);
+}
 
+footer {
+    width: 100%;
+    margin: 30px;
+    font-size: 17px;
+    text-align: center;
 }
 
 .splash {
@@ -196,6 +208,158 @@ form.search-field::after {
 
 nav .fa {
     display: none;
+}
+
+.company-intro {
+    margin-top: 40px;
+    color: var(--textColor);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.company-intro h2 {
+    font-size: 35px;
+}
+
+.company-intro h4 {
+    margin-top: 20px;
+    color: #464545;
+}
+
+.intro-button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.button-tap {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.elevated-button {
+    margin: 30px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 5px 10px 15px var(--shadowColor);
+    background-image: linear-gradient(to right, white);
+}
+
+.elevated-button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, var(--primaryColor), yellow);
+}
+
+.company-illustration {
+    height: 350px;
+    width: 700px;
+}
+
+.whatwedo {
+    display: inline-flex;
+    padding: 10px 25px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.whatwedo {
+    font-size: 23px;
+}
+
+.whatwedo h4 {
+    width: 600px;
+    margin-left: 100px;
+    font-size: 17px;
+    text-align: start;
+}
+
+.company-services {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.company-service-div {
+    padding: 15px;
+    display: flex;
+    margin: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 350px;
+    text-align: center;
+    --border-color: var(--primaryColor);
+    /* the border color */
+    --border-thickness: 6px;
+    /* the border thickness*/
+    --border-gap: 5px;
+    /* the gap on hover */
+
+    padding: calc(var(--border-gap) + var(--border-thickness));
+    --_g: #0000 25%, var(--border-color) 0;
+    background:
+        conic-gradient(from 180deg at top var(--border-thickness) right var(--border-thickness), var(--_g)) var(--_i, 200%) 0 /200% var(--_i, var(--border-thickness)) no-repeat,
+        conic-gradient(at bottom var(--border-thickness) left var(--border-thickness), var(--_g)) 0 var(--_i, 200%)/var(--_i, var(--border-thickness)) 200% no-repeat;
+    transition: .3s, background-position .3s .3s;
+}
+
+
+
+.company-service-div:hover {
+    --_i: 100%;
+    transition: .3s, background-size .3s .3s;
+}
+
+.company-service-image {
+    height: 150px;
+    width: 250px;
+}
+
+.company-service-title,
+.company-service-desc {
+
+    margin-top: 10px;
+}
+
+.company-service-desc {
+    color: rgb(71, 70, 70);
+    font-size: 14px;
+}
+
+.stats-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.stats-card {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    flex-basis: 24%;
+}
+
+.stats-card h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: var(--textColor);
+}
+
+.stats-card p {
+    margin-bottom: 0;
+    font-size: 27px;
+    color: var(--primaryColor);
 }
 
 .title {
@@ -661,6 +825,35 @@ h2 {
         text-overflow: ellipsis;
         margin-right: 400px;
     }
+
+    .company-intro h2 {
+        font-size: 27px;
+    }
+
+    .company-services {
+        width: auto;
+    }
+
+    .company-service-div {
+        width: 250px;
+    }
+
+    .company-service-desc {
+        font-size: 12px;
+    }
+
+    .stats-section {
+        flex-wrap: wrap;
+    }
+
+    .stats-card h2 {
+        font-size: 18px;
+    }
+
+    .stats-card p {
+        font-size: 20px;
+    }
+
 }
 
 @media(max-width: 1050px) {
@@ -796,5 +989,20 @@ h2 {
         height: 150px;
         width: 300px;
         margin-right: 350px;
+    }
+
+    .company-intro img {
+        height: 250px;
+        width: 350px;
+    }
+
+    .whatwedo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .whatwedo h4 {
+        font-size: 14px;
+        margin: 20px;
     }
 }
