@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- meta data for responsiveness -->
+	<meta name="viewport" content="with=device-width, initial-scale=1.0">
+	<title>Home</title>
+
+	<!-- main css file -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- custom font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+	<!-- Icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="splash">
+		<h1 class="fade-in">Welcome to Nvidia</h1>
+	</div>
+	<section class="header">
+		<nav>
+			<a href="index.html"><img src="../images/logo.png"></a>
+			<div class="nav-links" id="nav-link">
+
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+				<ul>
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="pages/services.html">Services</a></li>
+					<li><a href="pages/portfolio.html">Portfolio</a></li>
+					<li><a href="pages/team.html">Team</a></li>
+					<li><a href="pages/about.html">About</a></li>
+					<li><a href="pages/contact.html">Contact</a></li>
+
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()""></i>
+
+		</nav>
+	</section>
+	<section class=" search-box">
+				<div class="search-text">
+					<h2>YOU ARE IN THE RIGHT PLACE</h2>
+					<h4>SEARCH HERE</h4>
+					<!-- The form -->
+					<form class="search-field">
+						<input class="effect-8" type="text" placeholder="Search.." name="search">
+						<button type="submit" onsubmit=""><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+	</section>
+	<script src="javascript/index.js"></script>
+</body>
+
+</html>
